@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c5c6cf",
+                    "primary-fixed": "#ffe088",
+                    "on-tertiary-fixed": "#191b22",
+                    "on-surface-variant": "#d0c5af",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#99907c",
+                    "on-tertiary-container": "#43454c",
+                    "on-primary-fixed": "#241a00",
+                    "surface": "#121317",
+                    "outline-variant": "#4d4635",
+                    "on-tertiary": "#2e3037",
+                    "inverse-on-surface": "#2f3034",
+                    "surface-container-highest": "#343539",
+                    "on-secondary-fixed": "#1a1b20",
+                    "on-secondary": "#2f3035",
+                    "surface-variant": "#343539",
+                    "on-error": "#690005",
+                    "surface-dim": "#121317",
+                    "surface-container-lowest": "#0d0e12",
+                    "surface-tint": "#e9c349",
+                    "error": "#ffb4ab",
+                    "background": "#121317",
+                    "secondary-fixed-dim": "#c7c6cb",
+                    "primary": "#f2ca50",
+                    "surface-container-low": "#1a1b1f",
+                    "on-surface": "#e3e2e7",
+                    "tertiary-container": "#b1b2bb",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "primary-container": "#d4af37",
+                    "on-primary": "#3c2f00",
+                    "on-primary-fixed-variant": "#574500",
+                    "secondary-container": "#46464b",
+                    "on-primary-container": "#554300",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#292a2e",
+                    "surface-bright": "#38393d",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary": "#c7c6cb",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "inverse-primary": "#735c00",
+                    "surface-container": "#1e1f23",
+                    "on-secondary-container": "#b5b4ba",
+                    "inverse-surface": "#e3e2e7",
+                    "tertiary-fixed": "#e2e2eb",
+                    "on-background": "#e3e2e7",
+                    "tertiary": "#cdced7",
+                    "secondary-fixed": "#e3e2e8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "gutter": "16px",
+                    "element-gap": "12px",
+                    "container-padding": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Outfit"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Outfit"],
+                    "display-xl": ["Outfit"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0B0C10; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-10 py-6 shadow-2xl">
+<div class="text-2xl font-bold tracking-tighter text-yellow-600 dark:text-yellow-500">NGUYENVU Mobile</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-white/60 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300" href="#">iPhone</a>
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-white/60 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300" href="#">Samsung</a>
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-white/60 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300" href="#">Vertu</a>
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-white/60 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300" href="#">Máy cũ</a>
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-white/60 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300" href="#">Trả góp</a>
+<a class="font-sans tracking-widest uppercase text-xs font-semibold text-yellow-600 border-b-2 border-yellow-600 pb-1" href="#">Liên hệ</a>
+</div>
+<div class="flex items-center gap-6 text-yellow-600">
+<button class="scale-95 active:scale-90 transition-transform"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button>
+<button class="scale-95 active:scale-90 transition-transform"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="An ultra-luxury showroom interior featuring sleek obsidian surfaces and gold accents. The lighting is low-key with soft spotlights highlighting high-end mobile devices on glass pedestals. The overall atmosphere is ethereal and exclusive, echoing a private gallery space with deep shadows and metallic glints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_eGqY8hM8xRvmxyCVydeYFkI0P1t0wvExPVrpYEqMY4fQw_AycHjr3UzGxsMh0wXeQ-iDIb7ekpSqxXzF28BpceSQO2I-hshJA-4nVhdSAnyZxMQOvcBA2oV6EV4BXG_U8fgIOul4SRe5fqcZuLjU41ME8XexzvN_tWP341dyMLmKPjT6lPMaeO0hWV4q60X4F5yuMperACFTu1l8l2pRlZk1P4VfjvbGF8j9VrxRGtWNiS9rrkuEpVnSaY5PWESYgZrStU9WoVk"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/80 to-surface"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-gutter">
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Liên Hệ NGUYENVU Mobile</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Trải nghiệm không gian mua sắm thượng lưu và dịch vụ chăm sóc khách hàng đẳng cấp.</p>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+<div class="w-[1px] h-20 bg-white/10 relative">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-primary"></div>
+</div>
+</div>
+</section>
+<!-- Contact Info Cards -->
+<section class="max-w-7xl mx-auto px-10 mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Hotline VIP</h3>
+<p class="text-primary font-headline-lg text-headline-lg tracking-wider">1900 xxxx</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4">Hỗ trợ đặc quyền 24/7</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Email</h3>
+<p class="text-primary font-headline-lg text-headline-lg tracking-wider">vip@nguyenvumobile.com</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4">Phản hồi trong vòng 2 giờ</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Giờ Phục Vụ</h3>
+<p class="text-primary font-headline-lg text-headline-lg tracking-wider">08:30 - 22:00</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4">Làm việc cả ngày lễ</p>
+</div>
+</div>
+</section>
+<!-- Showroom System -->
+<section class="max-w-7xl mx-auto px-10 mb-section-gap">
+<div class="flex items-center gap-6 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-white">Hệ Thống Showroom</h2>
+<div class="h-[1px] flex-grow bg-white/10"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- HCM Branch -->
+<div class="group relative aspect-[16/9] overflow-hidden glass-card">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" data-alt="Exterior shot of a luxury boutique showroom in Ho Chi Minh City's District 1. The facade features gold trim, large pristine glass windows, and warm ambient lighting. The street environment is high-end and clean, conveying an atmosphere of extreme wealth and sophisticated retail design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJMXEddB2KLaXnIKgZ31NOFv3wUTo5pcnm21A-y1bjqJI1XwVDZgECLkYe4oKu9dHTzQVXXUxfiQuSPwM1UxOJkirb1uLjE0XWZfcsl_nqi7d4gm5p4PqBp1ihO2xwWJTn-zUnF2kQ6hXFqDiWGZ-xnlya2w3AstvFgL9nCNP8bjbOx6Mph6PgKEKOhmBhMCpi5T-TR5Leg8-4TXTylZoUAEXixrKWj2qDKPCRwQlEmi0lD682mabQWEc0pGFOMPhs_7neU8RIYdU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block tracking-widest">Chi nhánh HCM</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">68 Đồng Khởi, Quận 1</h3>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm hover:gap-4 transition-all" href="#">
+                        Xem bản đồ <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- HN Branch -->
+<div class="group relative aspect-[16/9] overflow-hidden glass-card">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" data-alt="Interior of a premium mobile boutique in Hanoi's Hoan Kiem district. Sophisticated architecture with dark marble flooring, backlit gold display shelves, and minimalist furniture. The lighting is dramatic and warm, creating a sanctuary-like shopping experience for high-end technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRdljmWI6omFr5CDQR5dqZm5F2PTAq_2sePQbXGkSbjSCZfHNLKv3gCvy0AVA2t40Gzg6LHGsXbotJWf9KNpXlKZrPgIztodfc1vBzXH40CZeLQvnYKXsKDQBmakPm5FmSCL2BKmIWkDRjrqC6fTpmap8Viyh0zoqA37AUOpnABOkua4omFfWxmYNA28T8KZLv6-GbPSpUHq3hVjHAc517GMSLSujATCnNyh-kkaeQxon9SXpv_6DrP8cGtpCToUGEHcKy3ThfAoE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block tracking-widest">Chi nhánh HN</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">99 Tràng Tiền, Hoàn Kiếm</h3>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm hover:gap-4 transition-all" href="#">
+                        Xem bản đồ <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="max-w-7xl mx-auto px-10 mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display-xl text-headline-lg text-white mb-6 uppercase tracking-tighter">Gửi Yêu Cầu Tư Vấn</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Để lại thông tin, chuyên viên tư vấn VIP của chúng tôi sẽ liên hệ với quý khách trong thời gian sớm nhất.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-white/40">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-label-sm">Bảo mật thông tin khách hàng tuyệt đối</span>
+</div>
+<div class="flex items-center gap-4 text-white/40">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-label-sm">Dịch vụ giao hàng hỏa tốc trong 2h</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-12">
+<form class="space-y-8">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 focus:ring-0 focus:border-primary text-white placeholder-white/20 transition-all font-body-md" id="name" placeholder="HỌ VÀ TÊN" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 focus:ring-0 focus:border-primary text-white placeholder-white/20 transition-all font-body-md" id="phone" placeholder="SỐ ĐIỆN THOẠI" type="tel"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 focus:ring-0 focus:border-primary text-white placeholder-white/20 transition-all font-body-md" id="email" placeholder="EMAIL" type="email"/>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 focus:ring-0 focus:border-primary text-white placeholder-white/20 transition-all font-body-md resize-none" id="message" placeholder="LỜI NHẮN CỦA QUÝ KHÁCH" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary py-6 text-black font-label-sm uppercase tracking-[0.3em] hover:bg-primary-fixed transition-all duration-300 active:scale-95" type="submit">
+                        Gửi Yêu Cầu
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Placeholder -->
+<section class="w-full h-[500px] bg-surface-container-lowest grayscale relative border-y border-white/5">
+<div class="absolute inset-0 opacity-20" data-location="Ho Chi Minh City" style="">
+<img class="w-full h-full object-cover" data-alt="A minimalist, stylized digital map of Ho Chi Minh City District 1, rendered in dark obsidian and charcoal tones with subtle gold neon lines highlighting the main thoroughfares. The style is technical and elegant, reminiscent of a luxury vehicle's navigation system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwYemYEBhjZBBk3vrQ1Jo1SPuVux1m8MsHgtOA3nlEIrU8tx-JBZ5eTv2Wtx4GmLszqP4LfK01vV1-6UOe1bkqi28kkHeYFND02A9slUowVGMfw5rqMrl16PUVMThDwyugoPiT3_tV_rmBnZNMNSQX3w6wmO0ecZRTogp-wat073I0nhuDfmsuyHnMig9K3xChhKt41EkskmvJVLb8AMxPQwx7AMXKSBNZYQeV13IyetAoHDXir4fBMvoEUTa61i-DzaGsnhATzgI"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="glass-card p-8 border border-primary/20 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="location_on">location_on</span>
+<div>
+<p class="text-white font-headline-md">Hệ thống bản đồ</p>
+<p class="text-white/40 text-sm">Khám phá vị trí các showroom</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full border-t border-white/5">
+<div class="flex flex-col items-center gap-8 py-20 px-8 w-full max-w-7xl mx-auto">
+<div class="text-xl font-black text-yellow-600 uppercase tracking-widest">NGUYENVU Mobile</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors duration-500" href="#">Bảo mật</a>
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase text-yellow-500 font-bold" href="#">Showroom</a>
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors duration-500" href="#">Tuyển dụng</a>
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors duration-500" href="#">Hỗ trợ</a>
+</div>
+<div class="w-12 h-[1px] bg-yellow-600/30"></div>
+<p class="font-sans text-[10px] tracking-[0.2em] uppercase text-white/40">© 2024 NGUYENVU MOBILE. EXCLUSIVE RETAIL.</p>
+</div>
+</footer>
+</body></html>

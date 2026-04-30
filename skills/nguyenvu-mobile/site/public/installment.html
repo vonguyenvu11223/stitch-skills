@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#343539",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary": "#c7c6cb",
+                    "on-tertiary-fixed": "#191b22",
+                    "primary": "#f2ca50",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#735c00",
+                    "on-secondary-container": "#b5b4ba",
+                    "secondary-container": "#46464b",
+                    "surface-dim": "#121317",
+                    "primary-container": "#d4af37",
+                    "on-surface-variant": "#d0c5af",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-low": "#1a1b1f",
+                    "outline": "#99907c",
+                    "tertiary-container": "#b1b2bb",
+                    "tertiary-fixed-dim": "#c5c6cf",
+                    "outline-variant": "#4d4635",
+                    "on-background": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "surface": "#121317",
+                    "primary-fixed": "#ffe088",
+                    "surface-tint": "#e9c349",
+                    "inverse-on-surface": "#2f3034",
+                    "secondary-fixed": "#e3e2e8",
+                    "on-secondary-fixed": "#1a1b20",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e3e2e7",
+                    "tertiary": "#cdced7",
+                    "surface-bright": "#38393d",
+                    "on-tertiary-container": "#43454c",
+                    "on-error-container": "#ffdad6",
+                    "background": "#121317",
+                    "surface-container": "#1e1f23",
+                    "on-secondary": "#2f3035",
+                    "tertiary-fixed": "#e2e2eb",
+                    "surface-container-lowest": "#0d0e12",
+                    "secondary-fixed-dim": "#c7c6cb",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container-high": "#292a2e",
+                    "on-tertiary": "#2e3037",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "surface-variant": "#343539",
+                    "on-primary-container": "#554300",
+                    "on-primary": "#3c2f00",
+                    "on-surface": "#e3e2e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "element-gap": "12px",
+                    "section-gap": "80px",
+                    "unit": "8px",
+                    "container-padding": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Outfit"],
+                    "display-xl": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Outfit"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #0B0C10; color: #e3e2e7; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .shimmer:hover {
+            background: linear-gradient(90deg, #D4AF37 0%, #FFF5D1 50%, #D4AF37 100%);
+            background-size: 200% 100%;
+            transition: background 0.5s ease;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<a href="index.html"><div class="text-2xl font-bold tracking-tighter text-[#D4AF37] font-headline-lg">NGUYENVU Mobile</div></a>
+<nav class="hidden md:flex items-center gap-8 font-sans tracking-tight">
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300" href="iphone.html">iPhone</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300" href="samsung.html">Samsung</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300" href="vertu.html">Vertu</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300" href="used-phones.html">Máy cũ</a>
+<a class="text-[#D4AF37] border-b-2 border-[#D4AF37] py-1" href="installment.html">Trả góp</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300" href="contact.html">Liên hệ</a>
+</nav>
+<div class="flex items-center gap-6 text-[#D4AF37]">
+<span class="material-symbols-outlined cursor-pointer hover:scale-95 transition-transform" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-95 transition-transform" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic close-up of a high-end titanium smartphone resting on a black marble surface with dramatic rim lighting. The scene is bathed in a luxurious 'Aurelian Noir' aesthetic with soft golden reflections dancing across the sleek dark metal. Deep shadows and pristine highlights emphasize the precision craftsmanship and exclusive nature of the device. The background is a velvety dark void that accentuates the metallic gold and obsidian tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDggBhKkLhVu6BpNBnXOv_xAGt72hj_noIywSAGbBsr0va9xNxF8MCNRK3KSQFKqOvA3gfZnYGHGbFOMg2Y9gdmX5uhd20xP_zFQEW46E2CkscTcDSKBEokAs3Wp_wBgn7CX9_vhbHR5Xe_ncsn9fOR5R5PKiZMe1jcOAdnALzjRJAXd4wjCEE05IDLpAun3e0x9FdpVLeIOHGlclBrvy5wCq8b1OY0d-uYxLB8PblHvgBu3Sch67fSL5KB95d1imVavXL99KsKILc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="font-display-xl text-display-xl text-on-background mb-6">Sở Hữu Siêu Phẩm - <span class="text-[#D4AF37]">Thanh Toán Dễ Dàng</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Trả góp 0% lãi suất thông qua thẻ tín dụng hoặc hồ sơ duyệt nhanh. Thủ tục nhanh gọn chỉ trong 15 phút, rước máy ngay.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="px-10 py-4 bg-[#D4AF37] text-black font-bold tracking-widest uppercase text-label-sm rounded-lg shimmer transition-all duration-300">Tính toán trả góp</button>
+<button class="px-10 py-4 border border-[#D4AF37] text-[#D4AF37] font-bold tracking-widest uppercase text-label-sm rounded-lg hover:bg-[#D4AF37]/10 transition-all duration-300">Xem hướng dẫn</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+<div class="w-[1px] h-20 bg-white/10 relative">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-[#D4AF37]"></div>
+</div>
+</div>
+</section>
+<!-- Benefits Grid -->
+<section class="py-section-gap px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="glass-card p-10 rounded-xl group hover:bg-white/10 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-[#D4AF37] mb-6 block" data-icon="percent">percent</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">0% Lãi Suất</h3>
+<p class="text-on-surface-variant opacity-80 leading-relaxed">Áp dụng cho thanh toán qua thẻ tín dụng của hơn 25 ngân hàng liên kết toàn quốc.</p>
+</div>
+<div class="glass-card p-10 rounded-xl group hover:bg-white/10 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-[#D4AF37] mb-6 block" data-icon="description">description</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">Không Chứng Minh</h3>
+<p class="text-on-surface-variant opacity-80 leading-relaxed">Chỉ cần CCCD, không yêu cầu bảng lương hay chứng minh tài chính rườm rà.</p>
+</div>
+<div class="glass-card p-10 rounded-xl group hover:bg-white/10 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-[#D4AF37] mb-6 block" data-icon="timer">timer</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">Duyệt Nhanh 15 Phút</h3>
+<p class="text-on-surface-variant opacity-80 leading-relaxed">Quy trình xử lý hồ sơ tối giản, nhận kết quả ngay lập tức tại cửa hàng.</p>
+</div>
+<div class="glass-card p-10 rounded-xl group hover:bg-white/10 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-[#D4AF37] mb-6 block" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">Bảo Mật Tuyệt Đối</h3>
+<p class="text-on-surface-variant opacity-80 leading-relaxed">Thông tin khách hàng được mã hóa và bảo mật theo tiêu chuẩn quốc tế cao nhất.</p>
+</div>
+</div>
+</section>
+<!-- Partners -->
+<section class="py-12 border-y border-white/5 bg-[#0D0E12]">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-label-sm text-white/30 mb-8 uppercase tracking-[0.3em]">Đối tác tài chính chiến lược</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Partner" class="h-8 md:h-12 object-contain" data-alt="Minimalist vector logo of Vietcombank in a premium monochrome gold finish against a deep black background. The design is sleek, professional, and reflects a high-end banking partnership with NGUYENVU Mobile's luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhVQPIVUfhP2RPTHP7-dcKWGpiqybFP3YS630i57Mdq_rXfRqiE8BoSs-Omi9Guezi5HZGxhhhAO-cwERELzxCPnBCqxdaXiEX6YbFEaNQdxq2P0ZUAXqmC61aEM2OjIZ-dndfz3K02XcwIIM8CgA3SpInsU1onyj625f28J6OphxsiESTsn8NBOtEOB2B1rNIi-9YUlR1PqIiUzNigCuSnjDqb6x3ntG9h5rwCRG5yI7Xudy8NAon4xnDOkCqNn3B86EslaM1Qig"/>
+<img alt="Partner" class="h-8 md:h-12 object-contain" data-alt="Techcombank brand identity presented in a sophisticated gold metallic texture on a dark obsidian backdrop. The lighting is soft and directional, highlighting the clean lines of the logo, embodying a sense of trust and elite financial services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-PSGD_Dv-pvld8Himv_wuLfZqOAXBl2SrOZFEZ73qgQY0Sg-V9_lDB987v3-CXZR8YX8CDsxuYc5IbfSsECwsF9rGDkZuMJk0lDUrbZ4Hh32X8ogYPvxpd62NmAn8sNpaAesV_r_LGUqOerZY-ApWV97kvB0gVW4J-6g5pkSOXZbscNN1I_fGtomcIX680KofryDpYrNg43gd1DXaPvALWn7_S2TBkkBrDUxVsYMZrITOc2jxcL9t3BQOUNRcFTk5B1eB7f7P0u8"/>
+<img alt="Partner" class="h-8 md:h-12 object-contain" data-alt="The Home Credit logo rendered in a minimalist luxury style, featuring a subtle gold gradient and fine metallic linework. The background is a solid deep charcoal, maintaining a clean and premium appearance for a high-end mobile retail platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsD70YrHCmp1IMr_8l_91FgUC_6vsO6Sqt1Syak56O10nnRHxdILpUPUYDvn-NiDmGf_5rhhJU9N--aKt52fbw7mW7B9s-nMh0IyMbFtsu2xmHqkyJj_iZvHrQStW4UbcFZkoBmrAAKERy5RRh4dDGkDb_iZIGi1_yDE2LmEc055CUdx60V4eqs-R7RY3UZCq9kINJHd891zawKVRWFqZj1s2GJl0nOzzYGnhUVXsuwu75_xf-EjMnSuUlhGEkaoq7yiBP1rQhF8U"/>
+<img alt="Partner" class="h-8 md:h-12 object-contain" data-alt="HD Saison corporate logo styled with an elegant gold foil effect. The graphic is centered on a pitch-black matte surface, conveying exclusivity and high-tier financial solutions for luxury consumer electronics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8TJ94mHsjAJDw8ggjfbqwdXRzzp8fjOufElBFTyZjPC60xoibLJ0mop9I7j4SoLHnmNliWphcp61Vg1BIXuORon3udZ-2UXGS0XuVQZcAqcD52REnV9U5xjJJ1-VVgHppvWYOkTDuI9NlU6p3XEL8OV_z2YZgVirmbzWnJgW6APyCqbnLns9lkdpoccZSRXN6B2cwpFsb1dIJ7w350bl3AjEv6QXjxwMYN_MW0imK5IwwTTl4l3phJ9qIBB1VECLMgXFmPc_ESr4"/>
+</div>
+</div>
+</section>
+<!-- Calculator Section -->
+<section class="py-section-gap px-6">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Dự Toán Khoản Vay</h2>
+<div class="w-12 h-1 bg-[#D4AF37] mx-auto"></div>
+</div>
+<div class="glass-card rounded-2xl overflow-hidden p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-8">
+<div>
+<label class="text-label-sm text-white/50 uppercase block mb-4">Chọn Sản Phẩm</label>
+<select class="w-full bg-white/5 border-b border-white/20 focus:border-[#D4AF37] outline-none text-on-background py-3 font-body-md appearance-none">
+<option>iPhone 15 Pro Max 256GB - 32.990.000₫</option>
+<option>Samsung Galaxy S24 Ultra - 29.990.000₫</option>
+<option>Vertu Signature V Black - 250.000.000₫</option>
+</select>
+</div>
+<div>
+<label class="text-label-sm text-white/50 uppercase block mb-4">Trả Trước (40%)</label>
+<input class="w-full h-1 bg-white/10 rounded-full appearance-none accent-[#D4AF37] cursor-pointer" max="70" min="30" type="range" value="40"/>
+<div class="flex justify-between mt-2 text-xs text-white/30">
+<span>30%</span>
+<span>70%</span>
+</div>
+</div>
+<div>
+<label class="text-label-sm text-white/50 uppercase block mb-4">Kỳ Hạn Thanh Toán</label>
+<div class="grid grid-cols-3 gap-4">
+<button class="py-3 border border-[#D4AF37] text-[#D4AF37] bg-[#D4AF37]/10 font-bold rounded-lg">6 Tháng</button>
+<button class="py-3 border border-white/10 text-white/50 hover:border-[#D4AF37] transition-colors rounded-lg">9 Tháng</button>
+<button class="py-3 border border-white/10 text-white/50 hover:border-[#D4AF37] transition-colors rounded-lg">12 Tháng</button>
+</div>
+</div>
+</div>
+<div class="bg-[#D4AF37]/5 rounded-xl p-8 border border-[#D4AF37]/20 flex flex-col items-center justify-center text-center">
+<span class="text-label-sm text-[#D4AF37] uppercase tracking-widest mb-4">Ước tính mỗi tháng</span>
+<div class="font-display-xl text-display-xl text-[#D4AF37] mb-2">3.245.000₫</div>
+<p class="text-on-surface-variant/60 text-sm mb-8 italic">Lãi suất tạm tính: 0% - Không phí ẩn</p>
+<button class="w-full py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-widest text-label-sm rounded-lg shadow-2xl hover:scale-[1.02] active:scale-95 transition-all">Đăng ký ngay</button>
+<p class="mt-6 text-xs text-white/20 px-4">Kết quả tính toán chỉ mang tính chất tham khảo. Vui lòng liên hệ nhân viên tư vấn để có số liệu chính xác nhất.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-black/90 backdrop-blur-2xl border-t border-white/5 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-white/40 hover:bg-white/5 px-4 py-2 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="home">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#D4AF37] font-bold hover:bg-white/5 px-4 py-2 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Installment</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/40 hover:bg-white/5 px-4 py-2 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/40 hover:bg-white/5 px-4 py-2 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col items-center gap-4 bg-[#0B0C10] border-t border-white/5">
+<div class="text-[#D4AF37] font-bold text-lg">NGUYENVU Mobile</div>
+<div class="flex gap-8 mb-4">
+<a class="text-white/30 text-xs font-light tracking-wide hover:text-white transition-all" href="#">Privacy</a>
+<a class="text-white/30 text-xs font-light tracking-wide hover:text-white transition-all" href="#">Terms</a>
+<a class="text-white/30 text-xs font-light tracking-wide hover:text-white transition-all" href="#">Partners</a>
+</div>
+<div class="text-white/30 text-xs font-light tracking-wide">© 2024 NGUYENVU Mobile. Luxury Standard.</div>
+</footer>
+</body></html>

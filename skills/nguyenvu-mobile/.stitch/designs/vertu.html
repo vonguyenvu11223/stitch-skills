@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e2e2eb",
+                    "surface-bright": "#38393d",
+                    "outline": "#99907c",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#c7c6cb",
+                    "secondary-fixed": "#e3e2e8",
+                    "on-primary-fixed": "#241a00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#cdced7",
+                    "on-tertiary-fixed": "#191b22",
+                    "on-surface": "#e3e2e7",
+                    "surface-tint": "#e9c349",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "on-primary-container": "#554300",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary": "#c7c6cb",
+                    "on-surface-variant": "#d0c5af",
+                    "on-tertiary": "#2e3037",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-secondary-container": "#b5b4ba",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "surface-dim": "#121317",
+                    "primary": "#f2ca50",
+                    "on-secondary-fixed": "#1a1b20",
+                    "secondary-container": "#46464b",
+                    "primary-container": "#d4af37",
+                    "outline-variant": "#4d4635",
+                    "surface-container-low": "#1a1b1f",
+                    "primary-fixed": "#ffe088",
+                    "background": "#121317",
+                    "surface-container-highest": "#343539",
+                    "on-tertiary-container": "#43454c",
+                    "surface-container-high": "#292a2e",
+                    "inverse-surface": "#e3e2e7",
+                    "tertiary-fixed-dim": "#c5c6cf",
+                    "on-primary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#343539",
+                    "on-secondary": "#2f3035",
+                    "tertiary-container": "#b1b2bb",
+                    "surface": "#121317",
+                    "inverse-on-surface": "#2f3034",
+                    "on-background": "#e3e2e7",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container": "#1e1f23"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "element-gap": "12px",
+                    "unit": "8px",
+                    "section-gap": "80px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Outfit"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Outfit"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0B0C10;
+            color: #e3e2e7;
+        }
+        .inner-glow-top-left {
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1);
+        }
+        .tonal-shift {
+            background: linear-gradient(180deg, #121317 0%, #0B0C10 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .shimmer-effect:hover {
+            background: linear-gradient(90deg, #D4AF37 0%, #F2CA50 50%, #D4AF37 100%);
+            background-size: 200% auto;
+            animation: shimmer 2s linear infinite;
+        }
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+<nav class="flex justify-between items-center px-12 h-20 max-w-[1140px] mx-auto">
+<div class="text-2xl font-light tracking-[0.2em] text-[#D4AF37]">
+                NGUYENVU
+            </div>
+<div class="hidden md:flex items-center gap-8 font-sans tracking-widest uppercase text-xs">
+<a class="text-[#D4AF37] border-b border-[#D4AF37] pb-1" href="#">Vertu</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors" href="#">iPhone Gold</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors" href="#">Watch</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors" href="#">Accessories</a>
+</div>
+<div class="flex items-center gap-6 text-[#D4AF37]">
+<button class="hover:bg-white/5 transition-all duration-500 p-2 rounded-full scale-95 duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:bg-white/5 transition-all duration-500 p-2 rounded-full scale-95 duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Category Hero -->
+<section class="relative h-[819px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A professional studio product photograph of a Vertu Signature V mobile phone made of polished black ceramic and gold accents, resting on a dark reflective surface. The lighting is dramatic and moody, with high-contrast highlights defining the phone's sleek edges. The background is a deep obsidian black with subtle atmospheric smoke. The overall aesthetic is ultra-luxurious, minimalist, and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo_PmzD9votv-W0bn-y9aKBBlrvsUDhHFDitQSjTKT-wA-INunVQ5LdlbuAqlWMidncPlH0Zc0jbdjVrGI0Rbg3q2LI_vcarWz66oj2k37s0Fd0UFVIzQ9-oRCpcHN47GEMbR_OUtRuySAxwKdmC-S2tIbjfAO90E0aYyUu8aaTYu6oGfqBbOuDiHUdJ08OgPa54dRh6xOdPks2jtV_rrpjV620ovJGtccVz1Hz9nAzU4ihFdHwVXUR1YFdOPn8Ytww3oB73Qy4BE"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/40 to-[#0B0C10]"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<div class="glass-card px-12 py-10 rounded-lg inline-block">
+<span class="font-label-sm text-primary-container mb-4 block tracking-[0.3em]">EXCLUSIVITY</span>
+<h1 class="font-display-xl text-on-surface uppercase mb-4">Vertu - Đẳng Cấp Thượng Lưu</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">
+                        Biểu tượng của sự xa xỉ, chế tác thủ công từ những vật liệu quý hiếm bậc nhất hành tinh.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Filter & Sort Bar -->
+<section class="sticky top-20 z-40 bg-[#0B0C10]/90 backdrop-blur-md border-b border-white/5">
+<div class="max-w-[1140px] mx-auto px-6 h-16 flex items-center justify-between font-label-sm uppercase">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="text-white/40">Dòng máy:</span>
+<span class="text-on-surface group-hover:text-primary transition-colors">Tất cả</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="text-white/40">Chất liệu:</span>
+<span class="text-on-surface group-hover:text-primary transition-colors">Tất cả</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4 cursor-pointer">
+<span class="text-white/40">Sắp xếp:</span>
+<span class="text-on-surface">Mới nhất</span>
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-[1140px] mx-auto px-6 py-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group flex flex-col">
+<div class="aspect-[4/5] w-full overflow-hidden mb-6 bg-surface-container-low inner-glow-top-left transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Ultra-close studio macro shot of a Vertu phone featuring genuine black crocodile leather and 18k yellow gold frame. The texture of the leather is hyper-detailed, reflecting soft studio lights. The metal parts have a mirror-like finish with precise industrial engravings. The background is a clean, dark gray gradient to emphasize the product's form." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCJwsu3f2Yi6EPjWlpMng5PHIC94c94ki0GnL2cpetE6IJyvom4jnpiD9bBFJMHxjvtqjizCYpl3S_0thNP2AHK5KAB8-KvJnmchInZ4DCgBZsqosgAuGgq72KrBjv-8FZMLy34YABRrPjC-JHMR_7Gtl40hA_DauGK2VL6PUM8AwNv9aiWuk3mq0_noQpk80GKgjPTEYzo6M1VnY7_aDnXPnAin-Z1GoEySjnJKHeBHdFBVeAGfLzgJmbKKLE6AMTPZHGgcAKdbw"/>
+</div>
+<div class="space-y-3 px-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Vertu Signature V Black Gold</h3>
+<span class="text-[10px] border border-primary-container text-primary-container px-2 py-0.5 tracking-tighter">LIMITED</span>
+</div>
+<p class="text-on-surface-variant font-label-sm opacity-60">Da cá sấu Pháp • Vàng 18k • Sapphire</p>
+<div class="font-display-xl text-primary-container text-2xl pt-2">
+                            250.000.000 <span class="text-sm font-light">VNĐ</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-6">
+<button class="bg-[#D4AF37] text-black font-label-sm py-4 shimmer-effect transition-all uppercase">MUA NGAY</button>
+<button class="border border-[#D4AF37] text-[#D4AF37] font-label-sm py-4 hover:bg-primary/10 transition-all uppercase">TƯ VẤN VIP</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col">
+<div class="aspect-[4/5] w-full overflow-hidden mb-6 bg-surface-container-low inner-glow-top-left transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Elegant Vertu Aster P smartphone presented in a luxury gift box. The phone features a titanium frame and a custom red alligator leather back. Soft bokeh lighting creates a warm, premium atmosphere in a dark setting. Every metallic detail is crisp, showing the precision of the manufacturing process. Studio luxury lighting with subtle gold reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDdt_X-SSuoL5YYMOyxYDhYkcgUp4us4hLeVx7hbzUE06RZSsW2vyFwWhafI_XFuXzb6DZjZE7cUKHO2coTwdTIDEvX2_KSBVpuOC1Zxe8orbTdMv2uvF7oTCYM3jgha95oT3V1kLQEWd6Ohmctqs3gx2yzjbBDku6yYFYgay0aXQbaehipA5NLyy06g2FmvpCoTvKWWk_Yc5c6rcZAw_8Ov7VUrmSrtNO5JaaXVEPFGIVzwomWu80R56AcYHrrnF7YG4t5V6qLzc"/>
+</div>
+<div class="space-y-3 px-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Vertu Aster P Red Alligator</h3>
+<span class="text-[10px] border border-white/20 text-white/40 px-2 py-0.5 tracking-tighter">NEW ARRIVAL</span>
+</div>
+<p class="text-on-surface-variant font-label-sm opacity-60">Da cá sấu • Titanium • Ceramic</p>
+<div class="font-display-xl text-primary-container text-2xl pt-2">
+                            135.000.000 <span class="text-sm font-light">VNĐ</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-6">
+<button class="bg-[#D4AF37] text-black font-label-sm py-4 shimmer-effect transition-all uppercase">MUA NGAY</button>
+<button class="border border-[#D4AF37] text-[#D4AF37] font-label-sm py-4 hover:bg-primary/10 transition-all uppercase">TƯ VẤN VIP</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col">
+<div class="aspect-[4/5] w-full overflow-hidden mb-6 bg-surface-container-low inner-glow-top-left transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern Metavertu carbon fiber edition mobile phone. High-tech minimalist aesthetic featuring sleek black carbon fiber patterns and high-polish silver accents. The lighting is cold and clinical, highlighting the futuristic design. The product is shot from an isometric angle against a matte black background to emphasize its thin profile and material quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Pwr15hnNr04T3UaT6FMtlMEaJF6gW9Lo5Z9H82gxl-HFiH9tG6ZMT8wwHTveC6EGa59j9_d3S1tVsgcqK61crJKdqLTZ2tP_VXkKLi2M1URfpECXVKYxZ2bfWvjKP9yOqXiHRSOBUD2TciHMOzhyFEYUeSeVhm9LGTDVFlxVJJ_5irEOkR7IMzMdyMVAV75Aj8miXQLbK3yNX4ETBWmHyLv1-JpF3LFEEbsOx648NVjkSUDzO45MBLwWM5RYzWx7-uSvZOEv-Ac"/>
+</div>
+<div class="space-y-3 px-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Metavertu Carbon Fiber</h3>
+<span class="text-[10px] border border-primary-container text-primary-container px-2 py-0.5 tracking-tighter">WEB3 EDITION</span>
+</div>
+<p class="text-on-surface-variant font-label-sm opacity-60">Sợi Carbon • Thép không gỉ • Sapphire</p>
+<div class="font-display-xl text-primary-container text-2xl pt-2">
+                            98.000.000 <span class="text-sm font-light">VNĐ</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-6">
+<button class="bg-[#D4AF37] text-black font-label-sm py-4 shimmer-effect transition-all uppercase">MUA NGAY</button>
+<button class="border border-[#D4AF37] text-[#D4AF37] font-label-sm py-4 hover:bg-primary/10 transition-all uppercase">TƯ VẤN VIP</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Indicator -->
+<div class="flex flex-col items-center mt-20 gap-6">
+<div class="w-px h-16 bg-white/10 relative">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-primary"></div>
+</div>
+<p class="font-label-sm text-white/40 tracking-[0.2em]">01 / 04</p>
+<button class="font-label-sm text-primary underline underline-offset-8 decoration-1">XEM THÊM TUYỆT TÁC</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 border-t border-white/5 bg-[#0B0C10]">
+<div class="flex flex-col items-center gap-8 max-w-[1140px] mx-auto text-center">
+<div class="text-lg font-bold text-[#D4AF37] tracking-[0.3em]">
+                NGUYENVU
+            </div>
+<div class="flex gap-8 font-sans text-xs tracking-tighter uppercase">
+<a class="text-gray-500 hover:text-[#D4AF37] transition-colors" href="#">Exclusivity</a>
+<a class="text-gray-500 hover:text-[#D4AF37] transition-colors" href="#">Craftsmanship</a>
+<a class="text-gray-500 hover:text-[#D4AF37] transition-colors" href="#">Private Concierge</a>
+<a class="text-gray-500 hover:text-[#D4AF37] transition-colors" href="#">Contact</a>
+</div>
+<div class="w-12 h-px bg-white/10 my-4"></div>
+<p class="font-sans text-xs tracking-widest text-white/30 uppercase">
+                © 2024 NGUYENVU MOBILE. COLLECTOR'S EDITION.
+            </p>
+<div class="flex gap-4 opacity-50">
+<span class="material-symbols-outlined text-sm" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-sm" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-sm" data-icon="youtube_activity">youtube_activity</span>
+</div>
+</div>
+</footer>
+</body></html>

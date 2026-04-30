@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-inverse-surface: #e3e2e7;
+  --color-error: #ffb4ab;
+  --color-surface-tint: #e9c349;
+  --color-background: #121317;
+  --color-inverse-on-surface: #2f3034;
+  --color-on-tertiary: #2e3037;
+  --color-on-error-container: #ffdad6;
+  --color-on-background: #e3e2e7;
+  --color-on-tertiary-container: #43454c;
+  --color-on-primary-container: #554300;
+  --color-error-container: #93000a;
+  --color-on-secondary-fixed: #1a1b20;
+  --color-tertiary-fixed: #e2e2eb;
+  --color-on-secondary-fixed-variant: #46464b;
+  --color-on-primary-fixed-variant: #574500;
+  --color-on-tertiary-fixed-variant: #45464e;
+  --color-outline: #99907c;
+  --color-on-primary-fixed: #241a00;
+  --color-secondary: #c7c6cb;
+  --color-primary-fixed-dim: #e9c349;
+  --color-surface-container-highest: #343539;
+  --color-surface-variant: #343539;
+  --color-tertiary: #cdced7;
+  --color-primary: #f2ca50;
+  --color-surface: #121317;
+  --color-primary-fixed: #ffe088;
+  --color-primary-container: #d4af37;
+  --color-surface-container-lowest: #0d0e12;
+  --color-tertiary-fixed-dim: #c5c6cf;
+  --color-outline-variant: #4d4635;
+  --color-surface-container-high: #292a2e;
+  --color-secondary-container: #46464b;
+  --color-on-surface-variant: #d0c5af;
+  --color-on-secondary: #2f3035;
+  --color-secondary-fixed-dim: #c7c6cb;
+  --color-on-tertiary-fixed: #191b22;
+  --color-surface-bright: #38393d;
+  --color-secondary-fixed: #e3e2e8;
+  --color-on-primary: #3c2f00;
+  --color-on-error: #690005;
+  --color-surface-container: #1e1f23;
+  --color-surface-container-low: #1a1b1f;
+  --color-tertiary-container: #b1b2bb;
+  --color-surface-dim: #121317;
+  --color-on-surface: #e3e2e7;
+  --color-inverse-primary: #735c00;
+  --color-on-secondary-container: #b5b4ba;
+  --spacing-section-gap: 80px;
+  --spacing-unit: 8px;
+  --spacing-element-gap: 12px;
+  --spacing-gutter: 16px;
+  --spacing-container-padding: 24px;
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+  --font-display-xl: var(--font-outfit);
+  --font-headline-lg: var(--font-outfit);
+  --font-headline-md: var(--font-outfit);
+  --font-body-lg: var(--font-inter);
+  --font-body-md: var(--font-inter);
+  --font-label-sm: var(--font-inter);
+}
+
+body { 
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.gold-shimmer:hover, .shimmer-effect:hover {
+    background: linear-gradient(90deg, #D4AF37 0%, #f2ca50 50%, #D4AF37 100%);
+    background-size: 200% auto;
+    animation: shimmer 1.5s linear infinite;
+}
+@keyframes shimmer { to { background-position: 200% center; } }
+.scroll-track {
+    width: 1px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    position: relative;
+}
+.scroll-thumb {
+    width: 1px;
+    height: 40px;
+    background: #D4AF37;
+    position: absolute;
+    top: 0;
+}

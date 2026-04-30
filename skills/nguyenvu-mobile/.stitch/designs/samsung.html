@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#b1b2bb",
+                    "inverse-on-surface": "#2f3034",
+                    "on-surface": "#e3e2e7",
+                    "primary-container": "#d4af37",
+                    "surface-container": "#1e1f23",
+                    "tertiary": "#cdced7",
+                    "background": "#121317",
+                    "secondary-fixed-dim": "#c7c6cb",
+                    "on-secondary": "#2f3035",
+                    "secondary-container": "#46464b",
+                    "outline": "#99907c",
+                    "outline-variant": "#4d4635",
+                    "on-primary-container": "#554300",
+                    "inverse-surface": "#e3e2e7",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-surface-variant": "#d0c5af",
+                    "primary-fixed": "#ffe088",
+                    "tertiary-fixed-dim": "#c5c6cf",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#43454c",
+                    "on-tertiary": "#2e3037",
+                    "secondary-fixed": "#e3e2e8",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#e2e2eb",
+                    "surface": "#121317",
+                    "on-secondary-container": "#b5b4ba",
+                    "on-error": "#690005",
+                    "surface-bright": "#38393d",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "on-tertiary-fixed": "#191b22",
+                    "secondary": "#c7c6cb",
+                    "primary": "#f2ca50",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "surface-dim": "#121317",
+                    "surface-container-highest": "#343539",
+                    "on-secondary-fixed": "#1a1b20",
+                    "on-primary-fixed": "#241a00",
+                    "surface-variant": "#343539",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-background": "#e3e2e7",
+                    "surface-tint": "#e9c349",
+                    "surface-container-lowest": "#0d0e12",
+                    "surface-container-high": "#292a2e",
+                    "surface-container-low": "#1a1b1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "unit": "8px",
+                    "container-padding": "24px",
+                    "section-gap": "80px",
+                    "element-gap": "12px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "display-xl": ["Outfit"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, rgba(11, 12, 16, 1) 70%);
+        }
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .shimmer:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-stone-950/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10">
+<div class="flex justify-between items-center px-8 h-20 w-full">
+<div class="text-2xl font-bold tracking-widest text-[#D4AF37] uppercase font-headline-lg">
+                NGUYENVU
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#D4AF37] border-b border-[#D4AF37] font-label-sm uppercase tracking-widest" href="#">Samsung</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300 font-label-sm uppercase tracking-widest" href="#">iPhone</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300 font-label-sm uppercase tracking-widest" href="#">Vertu</a>
+<a class="text-white/70 hover:text-[#D4AF37] transition-colors duration-300 font-label-sm uppercase tracking-widest" href="#">Collections</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-[#D4AF37] transition-colors" data-icon="search">search</span>
+<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-[#D4AF37] transition-colors" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-[#D4AF37] transition-colors" data-icon="person">person</span>
+</div>
+<button class="bg-[#D4AF37] text-stone-950 px-6 py-2.5 font-label-sm uppercase tracking-wider rounded-sm shimmer active:scale-95 transition-transform duration-200">
+                    Mua Ngay
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden hero-gradient">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 mix-blend-lighten" data-alt="A cinematic studio shot of the Samsung Galaxy Z Fold5 unfolded, positioned against a deep obsidian black background. Ethereal wisps of white smoke and soft golden light highlights drift across the frame, creating an atmosphere of mysterious luxury. The smartphone's metallic hinges and glass surfaces reflect a subtle warm glow, emphasizing its technical precision and premium craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJSvMzF3zCbfxE7uN5X5yL9_vlkXtS2-O9RPRKhoKaz2mhTnzEZWEwqt2OqhmR_Qhtloj6poBENN7WxEgcWAYDq7TbZIjk8CMcMOVesFqlVHgxXoT6JOrRZ5OVw3C5uI7A3nO_6PORmLwaiFgPje9gE99SI9nWpS6wto1zToH2LV2UOg8nD-r7CJbT1z7mlDMtADx5gbiHSXavBusQziAE6HkrO4ebCE0jY8Llu8gka0FhNDuFKphbVIh1SiiGy6vXm6ckh2bxguA"/>
+</div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-display-xl text-white mb-4 tracking-tight">Samsung Galaxy</h1>
+<p class="text-[#D4AF37] font-headline-md tracking-[0.2em] uppercase">Tiên Phong Công Nghệ</p>
+<div class="mt-12 flex justify-center">
+<div class="w-px h-24 bg-gradient-to-b from-[#D4AF37] to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="max-w-[1140px] mx-auto px-container-padding -mt-10 relative z-20">
+<div class="glass-panel p-6 rounded-xl flex flex-wrap items-center justify-between gap-6 shadow-2xl">
+<div class="flex flex-wrap gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Series</span>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-sm text-white group-hover:text-[#D4AF37] transition-colors">All Models</span>
+<span class="material-symbols-outlined text-xs text-[#D4AF37]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 border-l border-white/10 pl-8">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Capacity</span>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-sm text-white group-hover:text-[#D4AF37] transition-colors">Storage</span>
+<span class="material-symbols-outlined text-xs text-[#D4AF37]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 border-l border-white/10 pl-8">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Color</span>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-sm text-white group-hover:text-[#D4AF37] transition-colors">Exclusive</span>
+<span class="material-symbols-outlined text-xs text-[#D4AF37]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white/5 px-4 py-2 rounded-lg border border-white/5">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Sắp xếp:</span>
+<span class="font-label-sm text-[#D4AF37]">Mới nhất</span>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-[1140px] mx-auto px-container-padding py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- S24 Ultra -->
+<div class="group relative flex flex-col items-center">
+<div class="glass-panel w-full aspect-[4/5] rounded-xl flex items-center justify-center p-12 transition-all duration-500 group-hover:bg-white/5">
+<img class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" data-alt="A hyper-realistic 3D render of the Samsung Galaxy S24 Ultra in Titanium Gray. The phone is floating at a slight angle in a dark, minimalist studio space. Dramatic high-key rim lighting accentuates its sharp edges and the sophisticated texture of its titanium frame. The screen remains off, reflecting a dark, mirror-like quality with subtle golden highlights from the surrounding environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfQurH_XX1_B96H9skoQ_dkkBbGZVdn2dbQJAVSrQnNSWb-xpMQy1UB5v9JNRcwHPfMr8HeeEzz3lAso831IYr9y9SeILg9HxE70RU288IxHxRjx304uDg8ZWoGUNCrrlyn-pQmDuI4xt2BX0Nx7OuOgpfqexQGJZmLL67_zMn54Qww2Nirs89qYasjh2SPRSzXscyIxt4vgtiQ3QxqUd-3IGsgudKdXMr4hpdNK7gV7wk7koF6le0bdxOW80sPIZZJGem4VuNc-0"/>
+</div>
+<div class="mt-8 text-center">
+<span class="text-[10px] text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Titanium Edition</span>
+<h3 class="font-headline-md text-white mb-2">Galaxy S24 Ultra</h3>
+<p class="font-headline-lg text-[#D4AF37] mb-6">33.990.000 <span class="text-sm">VND</span></p>
+<div class="flex flex-col gap-4 w-full">
+<button class="bg-[#D4AF37] text-stone-950 w-full py-4 font-label-sm uppercase tracking-widest shimmer">Mua Ngay</button>
+<a class="text-white/40 font-label-sm uppercase tracking-widest hover:text-white transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="compare_arrows">compare_arrows</span> So sánh
+                            </a>
+</div>
+</div>
+</div>
+<!-- Z Fold5 -->
+<div class="group relative flex flex-col items-center translate-y-12">
+<div class="glass-panel w-full aspect-[4/5] rounded-xl flex items-center justify-center p-12 transition-all duration-500 group-hover:bg-white/5">
+<img class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" data-alt="An exquisite 3D product visualization of the Samsung Galaxy Z Fold5 half-folded on a dark, reflective surface. The aesthetic is clean and modern, focusing on the mechanical perfection of the hinge. The color is a deep Phantom Black with soft, diffused golden accent lighting that highlights the luxurious curves and glass surfaces. The mood is high-end, silent, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnCUHjbkUCOLzJt5WPdLV5wQIRrS4f32jUw3qhDM_YbUAEtKw2iW5YqTsmOwAsANBDjDGapYOZxETtFC1sMNVg3aXv-fqTC4hgVXAF032sJ0XVpfSzrZmnQBfmykd28PvWAtQ5asfnRyZc7TQOar_vWTf03pqO0-jQyKv98dSCUtyE3TdNJPdR0aQkEJ99Wd5VKEpM6hbxPMqCY-PepBHcW8QgOTkVt0fsDlrQ7pJOhLi4Puw6PBiWakykEaGXnAh8AhbAER1rfUQ"/>
+</div>
+<div class="mt-8 text-center">
+<span class="text-[10px] text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Flagship Foldable</span>
+<h3 class="font-headline-md text-white mb-2">Galaxy Z Fold5</h3>
+<p class="font-headline-lg text-[#D4AF37] mb-6">40.990.000 <span class="text-sm">VND</span></p>
+<div class="flex flex-col gap-4 w-full">
+<button class="bg-[#D4AF37] text-stone-950 w-full py-4 font-label-sm uppercase tracking-widest shimmer">Mua Ngay</button>
+<a class="text-white/40 font-label-sm uppercase tracking-widest hover:text-white transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="compare_arrows">compare_arrows</span> So sánh
+                            </a>
+</div>
+</div>
+</div>
+<!-- Z Flip5 -->
+<div class="group relative flex flex-col items-center">
+<div class="glass-panel w-full aspect-[4/5] rounded-xl flex items-center justify-center p-12 transition-all duration-500 group-hover:bg-white/5">
+<img class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" data-alt="A high-fashion product render of the Samsung Galaxy Z Flip5 in Mint. The device is closed, showcasing its large external cover screen in a studio environment with low-key lighting and deep shadows. Gold reflections bounce off the metal edges, creating a luxurious contrast with the soft pastel color of the glass. The composition is artistic and minimalist, emphasizing its compact, jewelry-like quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZq-_KutkAamU94CtlEduqlEH1R9MoeWNQhoSc8xpBioIac8dqUlFhTDKPRMIq1ZIDzdHaOuxXsyM5socWGufMbYUtYJ056cjzJ423NZYqJ0bw-eIxYrECghJAj8HrNQj9Etx1vqV6GUNwrpNll7FOL0hy5nHY8XHN8qFBuYXax-CeMfLXOiXd5QsSf2uxxtoaILbJyegLsjWxWgsPWs1kyh6KOY5GnkWGr5NFAAgxolXrAh57LyzWlLiKGaq87FSkdTBil5LEQU"/>
+</div>
+<div class="mt-8 text-center">
+<span class="text-[10px] text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Iconic Design</span>
+<h3 class="font-headline-md text-white mb-2">Galaxy Z Flip5</h3>
+<p class="font-headline-lg text-[#D4AF37] mb-6">25.990.000 <span class="text-sm">VND</span></p>
+<div class="flex flex-col gap-4 w-full">
+<button class="bg-[#D4AF37] text-stone-950 w-full py-4 font-label-sm uppercase tracking-widest shimmer">Mua Ngay</button>
+<a class="text-white/40 font-label-sm uppercase tracking-widest hover:text-white transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="compare_arrows">compare_arrows</span> So sánh
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact -->
+<section class="max-w-[1140px] mx-auto px-container-padding py-section-gap">
+<div class="glass-panel p-16 rounded-3xl text-center flex flex-col items-center">
+<h2 class="font-display-xl text-white mb-4">Nhận Đặc Quyền</h2>
+<p class="text-white/60 font-body-lg max-w-xl mb-12">Đăng ký để nhận thông tin về các phiên bản giới hạn và ưu tiên trải nghiệm những tuyệt tác công nghệ mới nhất từ Samsung.</p>
+<div class="flex w-full max-w-md border-b border-[#D4AF37] pb-2 group focus-within:border-white transition-colors">
+<input class="bg-transparent border-none focus:ring-0 text-white w-full placeholder:text-white/20 font-label-sm uppercase tracking-widest" placeholder="Địa chỉ Email của bạn" type="email"/>
+<button class="text-[#D4AF37] font-label-sm uppercase tracking-widest px-4 hover:text-white transition-colors">Gửi</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 w-full py-12 border-t border-white/5">
+<div class="flex flex-col items-center gap-12 w-full max-w-[1140px] mx-auto px-container-padding">
+<div class="text-[#D4AF37] font-black text-3xl tracking-[0.3em] font-headline-lg">NGUYENVU MOBILE</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 w-full text-center md:text-left">
+<div class="flex flex-col gap-4">
+<h4 class="text-[#D4AF37] font-label-sm uppercase tracking-widest">Hệ Thống Showroom</h4>
+<p class="text-stone-500 font-sans text-xs leading-loose uppercase tracking-tighter">68 Đồng Khởi, Quận 1, TP. HCM<br/>99 Tràng Tiền, Hoàn Kiếm, Hà Nội</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#D4AF37] font-label-sm uppercase tracking-widest">Dịch Vụ</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-stone-500 hover:text-white transition-colors font-sans text-xs tracking-widest uppercase" href="#">Service Center</a>
+<a class="text-stone-500 hover:text-white transition-colors font-sans text-xs tracking-widest uppercase" href="#">Vip Care</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#D4AF37] font-label-sm uppercase tracking-widest">Bảo Chứng</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-stone-500 hover:text-white transition-colors font-sans text-xs tracking-widest uppercase" href="#">Authenticity</a>
+<a class="text-stone-500 hover:text-white transition-colors font-sans text-xs tracking-widest uppercase" href="#">Heritage</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#D4AF37] font-label-sm uppercase tracking-widest">Kết Nối</h4>
+<p class="text-stone-500 font-sans text-xs tracking-widest uppercase">Hotline: 1900 8888</p>
+<div class="flex justify-center md:justify-start gap-4">
+<span class="material-symbols-outlined text-white/20 text-xl cursor-pointer hover:text-[#D4AF37]" data-icon="public">public</span>
+<span class="material-symbols-outlined text-white/20 text-xl cursor-pointer hover:text-[#D4AF37]" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 w-full flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-stone-500 font-sans text-[10px] tracking-widest uppercase">© 2024 NGUYENVU MOBILE. STELLAR CRAFTSMANSHIP.</p>
+<div class="flex gap-8">
+<a class="text-stone-500 hover:text-[#D4AF37] transition-colors font-sans text-[10px] tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-[#D4AF37] transition-colors font-sans text-[10px] tracking-widest uppercase" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-3 bg-stone-950/90 backdrop-blur-2xl rounded-t-3xl border-t border-white/5 z-50">
+<div class="flex flex-col items-center justify-center text-[#D4AF37] bg-white/5 rounded-xl px-4 py-2">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[8px] uppercase tracking-widest font-medium mt-1">Gallery</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/40 px-4 py-2 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[8px] uppercase tracking-widest font-medium mt-1">Galaxy</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/40 px-4 py-2 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[8px] uppercase tracking-widest font-medium mt-1">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/40 px-4 py-2 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[8px] uppercase tracking-widest font-medium mt-1">Cart</span>
+</div>
+</nav>
+</body></html>

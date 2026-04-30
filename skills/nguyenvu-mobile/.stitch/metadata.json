@@ -1,0 +1,67 @@
+{
+  "name": "projects/1025195508865031123",
+  "projectId": "1025195508865031123",
+  "title": "NGUYENVU Mobile",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "screens": {
+    "index": {
+      "id": "2be15afd844349c3b2706aa18dbba7f4",
+      "sourceScreen": "projects/1025195508865031123/screens/2be15afd844349c3b2706aa18dbba7f4",
+      "x": 0,
+      "y": 0,
+      "width": 2560,
+      "height": 7070
+    },
+    "iphone": {
+      "id": "885c58d60f694789ab438ae3f53e495e",
+      "sourceScreen": "projects/1025195508865031123/screens/885c58d60f694789ab438ae3f53e495e",
+      "x": 2600,
+      "y": 0,
+      "width": 2560,
+      "height": 4958
+    },
+    "samsung": {
+      "id": "d7b5e3cbba494a679707c8e8d881d487",
+      "sourceScreen": "projects/1025195508865031123/screens/d7b5e3cbba494a679707c8e8d881d487",
+      "x": 5200,
+      "y": 0,
+      "width": 2560,
+      "height": 5322
+    },
+    "vertu": {
+      "id": "a86ddd3ac16140dea51ad8d8e66a0a4b",
+      "sourceScreen": "projects/1025195508865031123/screens/a86ddd3ac16140dea51ad8d8e66a0a4b",
+      "x": 7800,
+      "y": 0,
+      "width": 2560,
+      "height": 4624
+    },
+    "used-phones": {
+      "id": "eeba8df69a1546f4adb09140db81c2bd",
+      "sourceScreen": "projects/1025195508865031123/screens/eeba8df69a1546f4adb09140db81c2bd",
+      "x": 10400,
+      "y": 0,
+      "width": 2560,
+      "height": 4852
+    },
+    "installment": {
+      "id": "709710239c9f4e56839f73c37c6b5b66",
+      "sourceScreen": "projects/1025195508865031123/screens/709710239c9f4e56839f73c37c6b5b66",
+      "x": 13000,
+      "y": 0,
+      "width": 2560,
+      "height": 4998
+    },
+    "contact": {
+      "id": "aa6ce07ffb36411b9a655c784772cb92",
+      "sourceScreen": "projects/1025195508865031123/screens/aa6ce07ffb36411b9a655c784772cb92",
+      "x": 15600,
+      "y": 0,
+      "width": 2560,
+      "height": 6134
+    }
+  }
+}
