@@ -143,7 +143,7 @@ export default function Page() {
 <span className="material-symbols-outlined text-[#D4AF37]" data-icon="star" data-weight="fill" >star</span>
 <span className="material-symbols-outlined text-[#D4AF37]" data-icon="star" data-weight="fill" >star</span>
 </div>
-<p className="font-label-sm uppercase tracking-widest text-secondary">— Doanh nhân Nguyễn Minh Thành</p>
+<p className="font-label-sm uppercase tracking-widest text-secondary">— Doanh nhân Võ Nguyên Vũ</p>
 </div>
 </section>
     </>
